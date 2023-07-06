@@ -130,7 +130,7 @@ def predict():
 
         # Load the image
         byteImgIO = io.BytesIO()
-        byteImg = Image.open(image_path)
+        byteImg = Image.open(image)
         byteImg.save(byteImgIO, "PNG")
         byteImgIO.seek(0)
         byteImg = byteImgIO.read()
