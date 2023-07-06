@@ -127,8 +127,6 @@ def predict():
     elif request.method == 'POST':
         # Save the image
         image = request.files['file']
-        image_path= "./images/" + image.filename
-        image.save(image_path) 
 
         # Load the image
         byteImgIO = io.BytesIO()
@@ -147,9 +145,6 @@ def predict():
         pred_classes = pred_probs.argmax(dim=1)
 
         print(allClasses[pred_classes])
-
-        # Delete the file, we dont want it
-        os.remove(image_path)
 
         # return render_template("index.html", prediction=allClasses[pred_classes])
         prediction = (allClasses[pred_classes])[0:-1]
