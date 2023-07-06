@@ -99,7 +99,7 @@ saveImg.addEventListener("click", () => {
     // Start the countdown timer
     var tt = setInterval(function(){
         const upload = (file) => {
-            fetch('http://localhost:3000/submit', {
+            fetch('/submit', {
                 method: 'POST',
                 body: file
             })
