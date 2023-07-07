@@ -5,7 +5,6 @@ import os
 import json
 import urllib.request
 from torch import nn
-from torchvision import datasets
 import torchvision.transforms as transforms
 from PIL import Image
 import requests
